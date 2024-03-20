@@ -10,7 +10,7 @@ bl_info = {
 import bpy
 
 from bpy_extras.io_utils import ExportHelper
-from bpy.props import StringProperty, BoolProperty, EnumProperty
+from bpy.props import StringProperty, BoolProperty
 from bpy.types import Operator
 
 
@@ -69,3 +69,6 @@ def unregister():
 
 if __name__ == "__main__":
     register()
+
+    # test call
+    bpy.ops.export_mc.json("INVOKE_DEFAULT")
