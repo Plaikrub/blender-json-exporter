@@ -77,9 +77,7 @@ def create_array_dict(stride, count, array):
 
 
 def export_mesh(obj, bones):
-    obj_mesh = obj.to_mesh(
-        bpy.context.scene, False, calc_tessface=False, settings="PREVIEW"
-    )
+    obj_mesh = obj.to_mesh()
     mesh_triangulate(obj_mesh)
     obj_mesh.calc_normals_split()
 
